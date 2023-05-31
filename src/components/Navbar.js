@@ -8,7 +8,7 @@ const Navbar = () => {
                     <div className="flex lg:flex-1">
                         <a href="#" className="-m-1.5 p-1.5 flex justify-center items-center">
                             {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""/> */}
-                            <span className="font-bold text-xl tracking-wider hover:text-cyan-700 ">EmpowerED</span>
+                            <span className="font-bold text-xl tracking-wider dark:text-cyan-600 dark:hover:text-gray-600">EmpowerED</span>
                         </a>
                     </div>
                     <div className="flex lg:hidden">
