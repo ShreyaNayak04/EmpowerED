@@ -15,11 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children, session }) {
   return (
-    <html lang="en">
+    <html className='scroll-smooth' lang="en">
       <body className={inter.className}>
         <ProviderSession session={session}>
           <Navbar />
-          <main>{children}</main>
+          <main className='min-h-screen'>{children}</main>
           <Footer/>
         </ProviderSession>
         

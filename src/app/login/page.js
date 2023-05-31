@@ -33,7 +33,7 @@ const page = () => {
         {/* footer */}
         <div>
             
-      <footer className="bg-white dark:bg-gray-500">
+      <footer className="bg-white dark:bg-gray-500 bottom-0">
         <div className="container px-6 py-8 mx-auto">
        <div className="text-center">
               <a href="#" className="text-3xl font-bold dark:text-cyan-400 hover:text-gray-700 dark:hover:text-gray-300  lg-text-3xl tracking-widest">EmpowerED.</a>
