@@ -2,6 +2,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import ProviderSession from '@/components/Provider'
+import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children, session }) {
         <ProviderSession session={session}>
           <Navbar />
           <main>{children}</main>
+          <Footer/>
         </ProviderSession>
         
       </body>
