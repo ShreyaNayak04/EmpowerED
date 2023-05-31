@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import ProviderSession from '@/components/Provider'
 import Navbar from '@/components/Navbar'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({ children, session }) {
           <Navbar />
           <main>{children}</main>
         </ProviderSession>
+        
       </body>
     </html>
   )
