@@ -60,9 +60,9 @@ const page = () => {
         </div>
         </div>
         </div>
-{/* homepage */}
 
           </div>
+       
 
       
        

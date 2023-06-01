@@ -1,6 +1,6 @@
-"use client"
+
 import React, { useState } from "react"
-const page = () => {
+const home = () => {
   return (
     <div className="relative mt-1 overflow-hidden bg-white">
       <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48 ">
@@ -22,4 +22,4 @@ const page = () => {
     </div>
   )
 }
-export default page
+export default home
