@@ -1,9 +1,7 @@
 "use client"
 
-import React from 'react'
-import { authoptions } from '../api/auth/[...nextauth]/route';
-import { signIn, useSession } from 'next-auth/react';
-import { redirect } from 'next/navigation';
+import { signIn } from 'next-auth/react'
+import React, { useState } from 'react'
 
 const page = () => {
     // const { data: session } = useSession(authoptions);
@@ -15,6 +13,20 @@ const page = () => {
     //     redirect('/')
     // }
     
+    const [credentials, setCredentials] = useState({
+        email: ""
+    })
+
+    const handleChange = (e) => {
+        setCredentials({...credentials, [e.target.name]: e.target.value})
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        signIn("credentials-login", {...credentials, callbackUrl: `${process.env.NEXT_PUBLIC_HOST}`, redirect: true})
+    }
+
     return (
         // homepage
         <div className="relative mt-1 overflow-hidden bg-white">
@@ -29,9 +41,8 @@ const page = () => {
         </div>
 {/* homepage */}
 
-
-        
-        </div>
+        <div>
+       
        
     )
 }

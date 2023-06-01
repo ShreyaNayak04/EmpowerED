@@ -1,12 +1,41 @@
 import SignToken from "@/utils/SignToken";
 import NextAuth from "next-auth/next";
 import GoogleProvider from 'next-auth/providers/google'
+import CredentialsProvider from "next-auth/providers/credentials";
 
 export const authoptions = {
     pages: {
         signIn: '/login'
     },
-    providers: [
+    providers:[
+        CredentialsProvider({
+            id: "credentials-login",
+            async authorize(credentials, req) {
+                const user = {
+                    "email": credentials?.email,
+                }
+                console.log(user)
+                if(user) {
+                    return user
+                }else{
+                    return null
+                }
+            }
+        }),
+        CredentialsProvider({
+            id: "credentials-signup",
+            async authorize(credentials, req) {
+                const user = {
+                    "email": credentials?.email,
+                }
+                console.log(user)
+                if(user) {
+                    return user
+                }else{
+                    return null
+                }
+            }
+        }),
         GoogleProvider({
             id: "google",
             checks: 'both',
@@ -30,7 +59,8 @@ export const authoptions = {
 
     callbacks: {
         async jwt({ token, user, account }) {
-            if (account) {
+            
+            if (account | user) {
                 const TOKEN = await SignToken(user?.email);
                 user.accessToken = TOKEN;
             }
