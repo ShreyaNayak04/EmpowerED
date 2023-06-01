@@ -293,7 +293,7 @@ function Footer() {
 
   <div
     className="p-4 text-center" >
-    © Copyright 2022. All Rights Reserved.
+    © Copyright 2023. All Rights Reserved.
     <a className="text-white" 
     >
       </a>
